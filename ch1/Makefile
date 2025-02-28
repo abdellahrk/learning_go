@@ -7,5 +7,8 @@ fmt:
 vet: fmt
 	go vet ./...
 
-build: vet 
+clean: vet
+	go clean -cache -i
+
+build: clean 
 	go build
